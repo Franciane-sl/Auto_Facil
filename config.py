@@ -1,0 +1,30 @@
+from pathlib import Path
+
+# CONFIGURAÇÕES GERAIS
+
+NOME_PROJETO = "Auto Fácil"
+
+# CONFIGURAÇÕES DO MODELO DE IA
+MODELO_IA = "qwen2.5:1.5b"
+OLLAMA_HOST = "http://localhost:11434"
+
+
+# CONFIGURAÇÕES DO ATENDIMENTO
+MAX_TENTATIVAS = 3
+SERVICOS_DISPONIVEIS = [
+    "revisao"
+]
+
+# CONFIGURAÇÕES DE HORÁRIOS
+HORARIOS_DISPONIVEIS = [
+    "08:00",
+    "10:00",
+    "14:00",
+    "16:00"
+]
+
+# CAMINHOS DOS ARQUIVOS
+DIRETORIO_BASE = Path(__file__).resolve().parent
+DIRETORIO_DADOS = DIRETORIO_BASE / "dados"
+ARQUIVO_AGENDAMENTOS = DIRETORIO_DADOS / "agendamentos.txt"
+ARQUIVO_LOG = DIRETORIO_DADOS / "erros.log"
